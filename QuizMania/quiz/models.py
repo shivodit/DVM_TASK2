@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Question(models.Model):
     quiz = models.ForeignKey("Quiz",on_delete = models.CASCADE,related_name="questions")
-    question = models.CharField("Questions",500)
+    question = models.CharField("question",max_length=500)
     index = models.IntegerField("index")
 
     class Meta:
@@ -26,6 +26,6 @@ class Choice(models.Model):
 
 
 class Quiz(models.Model):
-    title = models.CharField(500)
-    author = models.ForeignKey("User",on_delete=models.CASCADE,related_name="quiz")
+    title = models.CharField(max_length = 500)
+    author = models.ForeignKey("accounts.User",on_delete=models.CASCADE,related_name="quiz")
     pub_date = models.DateTimeField(auto_now_add=True)

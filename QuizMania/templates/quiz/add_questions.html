@@ -2,5 +2,10 @@
 {% block content %}
   <h2>Add Questions {{id}}</h2>
   {% csrf_token %}
-    
+  {{ form }}
+  {{ form_choice[0] }}
+  {{ form_choice[1] }}
+  {{ form_choice[2] }}
+  {{ form_choice[3] }}
+  
 {% endblock content %}

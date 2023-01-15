@@ -7,6 +7,6 @@ urlpatterns = [
     path('',views.dashboard,name='dashboard'),
     path('create_new_quiz/',views.createQuiz,name="create_quiz"),
     path('add_questions/<id>/',views.addQuestions,name="add_question"),
-    path('delete_questions/<id>/',views.deleteQuestions,name="delete_question"),
-    path('showQuiz/<id>/',views.showQuiz,name="show_quiz"),
+    # path('delete_questions/<id>/',views.deleteQuestions,name="delete_question"),
+    # path('showQuiz/<id>/',views.showQuiz,name="show_quiz"),
 ]
