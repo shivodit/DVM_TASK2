@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block content %}
+  <h2>Create new Quiz</h2>
+  {% csrf_token %}
+  {{form.as_p}}
+{% endblock content %}
